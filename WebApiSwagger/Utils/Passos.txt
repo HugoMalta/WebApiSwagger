@@ -1,0 +1,4 @@
+﻿Install-Package Swashbuckle.AspNetCore
+
+Install-Package LiteDB
+
