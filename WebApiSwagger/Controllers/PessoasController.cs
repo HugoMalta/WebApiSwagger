@@ -13,12 +13,15 @@ namespace WebApiSwagger.v1.Controllers
     [ApiController]
     public class PessoasController : ControllerBase
     {
+
         /// <summary>
         /// Listar todas as pessoas
         /// </summary>
         /// <returns>Lista de Pessoas</returns>
         // GET: api/Pessoas
         [HttpGet]
+        //[SwaggerResponse(200, typeof(Pessoa), "returns a new id of the bla bla")]
+        [ProducesResponseType(typeof(IEnumerable<Pessoa>), 209)]
         public IEnumerable<Pessoa> Get()
         {
             using (var db = new LiteDatabase(@"MyData.db"))
@@ -108,5 +111,6 @@ namespace WebApiSwagger.v1.Controllers
                 pessoas.Delete(x => x.Codigo == id);
             }
         }
+
     }
 }
