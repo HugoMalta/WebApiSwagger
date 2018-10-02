@@ -23,7 +23,7 @@ namespace WebApiSwagger.v1.Controllers
         }
 
         /// <summary>
-        /// Obter todos os valores
+        /// Obter todos os valores. Projeto padrão.
         /// </summary>
         /// <returns>Lista de valores</returns>
         [HttpGet]
