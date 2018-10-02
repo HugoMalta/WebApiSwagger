@@ -1,1 +1,1 @@
-https://api.travis-ci.com/HugoMalta/WebApiSwagger.svg?branch=master
+[![Build Status](https://travis-ci.com/HugoMalta/WebApiSwagger.svg?branch=master)](https://travis-ci.com/HugoMalta/WebApiSwagger)
