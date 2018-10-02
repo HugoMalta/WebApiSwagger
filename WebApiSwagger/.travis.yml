@@ -1,3 +1,11 @@
 ﻿language: csharp
 solution: WebApiSwagger.sln
 os:windows
+addons:
+  sonarcloud:
+    organization: "HugoMalta_WebApiSwagger" # the key of the org you chose at step #3
+    token:
+      secure: acfb61ab376c694a042c26511ea74fcbfc624c04 # encrypted value of your token
+script:
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
