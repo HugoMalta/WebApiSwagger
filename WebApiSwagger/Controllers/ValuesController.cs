@@ -12,9 +12,9 @@ namespace WebApiSwagger.v1.Controllers
     {
 
         /// <summary>
-        /// Primeiro Get
+        /// Teste de método que não é apresentado no Swagger.
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Lista de valores</returns>
         [HttpGet("/teste")]
         [ApiExplorerSettings(IgnoreApi = true)]
         public ActionResult<IEnumerable<string>> NaoMostrarNoSwagger()
@@ -23,47 +23,50 @@ namespace WebApiSwagger.v1.Controllers
         }
 
         /// <summary>
-        /// Primeiro Get
+        /// Obter todos os valores
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Lista de valores</returns>
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
             return new string[] { "value1", "value2" };
         }
         
-
-        /*///// <summary>
-        ///// Segundo Get com parâmetro
-        ///// </summary>
-        ///// <param name="id">Id de entrada</param>
-        ///// <param name="id">Id de entrada</param>
-        ///// <returns>Retorno Xpto</returns>*/
         /// <summary>
-        /// 
+        /// Obter valor por Id
         /// </summary>
         /// <param name="id">Identificador do Método GET</param>
         /// <param name="testeParametroNulo"><b>Apenas</b> um parâmetro de teste...</param>
-        /// <returns></returns>
+        /// <returns>Valor</returns>
         [HttpGet("{id}")]
         public ActionResult<string> Get(int id, int? testeParametroNulo)
         {
             return "value";
         }
 
-        // POST api/values
+        /// <summary>
+        /// Salvar
+        /// </summary>
+        /// <param name="value">Valor</param>
         [HttpPost]
         public void Post([FromBody] string value)
         {
         }
 
-        // PUT api/values/5
+        /// <summary>
+        /// Atualizar
+        /// </summary>
+        /// <param name="id">Identificador</param>
+        /// <param name="value">Valor</param>
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
         }
 
-        // DELETE api/values/5
+        /// <summary>
+        /// Excluir
+        /// </summary>
+        /// <param name="id">Identificador</param>
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
