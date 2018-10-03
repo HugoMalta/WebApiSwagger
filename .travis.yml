@@ -7,6 +7,9 @@ addons:
       secure: 598ffdf4751d508b9aca92c60a77417ed743ac57 # encrypted value of your token
 script:
   # other script steps might be done before running the actual analysis
-  SonarScanner.MSBuild.exe begin /k:"HugoMalta_WebApiSwagger" /d:sonar.organization="hugomalta-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="204852b7f0c405da50a8f065c0ceafb9bb157515"
-  MsBuild.exe /t:Rebuild
-  SonarScanner.MSBuild.exe end /d:sonar.login="204852b7f0c405da50a8f065c0ceafb9bb157515"
+  #SonarScanner.MSBuild.exe begin /k:"HugoMalta_WebApiSwagger" /d:sonar.organization="hugomalta-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="204852b7f0c405da50a8f065c0ceafb9bb157515"
+  #MsBuild.exe /t:Rebuild
+  #SonarScanner.MSBuild.exe end /d:sonar.login="204852b7f0c405da50a8f065c0ceafb9bb157515"
+  mono SonarQube.Scanner.MSBuild.exe begin /k:"204852b7f0c405da50a8f065c0ceafb9bb157515"
+  mono build
+  mono SonarQube.Scanner.MSBuild.exe end
