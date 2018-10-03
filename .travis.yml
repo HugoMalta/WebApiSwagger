@@ -10,6 +10,21 @@ script:
   #SonarScanner.MSBuild.exe begin /k:"HugoMalta_WebApiSwagger" /d:sonar.organization="hugomalta-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="204852b7f0c405da50a8f065c0ceafb9bb157515"
   #MsBuild.exe /t:Rebuild
   #SonarScanner.MSBuild.exe end /d:sonar.login="204852b7f0c405da50a8f065c0ceafb9bb157515"
-  mono SonarQube.Scanner.MSBuild.exe begin /k:"204852b7f0c405da50a8f065c0ceafb9bb157515"
-  mono build
-  mono SonarQube.Scanner.MSBuild.exe end
+  
+  #mono SonarQube.Scanner.MSBuild.exe begin /k:"204852b7f0c405da50a8f065c0ceafb9bb157515"
+  #mono build
+  #mono SonarQube.Sc1anner.MSBuild.exe end
+
+  #SonarScanner.MSBuild.exe begin /k:"HugoMalta_WebApiSwagger" /d:sonar.organization="hugomalta-github" /d:sonar.host.url="https://sonarcloud.io" /d:sonar.login="598ffdf4751d508b9aca92c60a77417ed743ac57"
+  #MsBuild.exe /t:Rebuild
+  #SonarScanner.MSBuild.exe end /d:sonar.login="598ffdf4751d508b9aca92c60a77417ed743ac57"
+
+
+  build-wrapper-linux-x86-64 --out-dir bw-output make clean all
+  sonar-scanner \
+  -Dsonar.projectKey=HugoMalta_WebApiSwagger \
+  -Dsonar.organization=hugomalta-github \
+  -Dsonar.sources=. \
+  -Dsonar.cfamily.build-wrapper-output=bw-output \
+  -Dsonar.host.url=https://sonarcloud.io \
+  -Dsonar.login=598ffdf4751d508b9aca92c60a77417ed743ac57
