@@ -1,6 +1,5 @@
 ﻿language: csharp
 solution: WebApiSwagger.sln
-os:windows
 addons:
   sonarcloud:
     organization: "HugoMalta_WebApiSwagger" # the key of the org you chose at step #3
