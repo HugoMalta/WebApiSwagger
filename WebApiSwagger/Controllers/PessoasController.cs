@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
 using LiteDB;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using WebApiSwagger.v1.Models;
+using Swashbuckle.AspNetCore.Annotations;
+using WebApiSwagger.Model.Model;
+using WebApiSwagger.Utils;
 
 namespace WebApiSwagger.v1.Controllers
 {
@@ -19,7 +22,10 @@ namespace WebApiSwagger.v1.Controllers
         /// </summary>
         /// <returns>Lista de Pessoas</returns>
         [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<Pessoa>), 209)]
+        [SwaggerResponse((int)HttpStatusCode.OK)]
+        [SwaggerResponse(210)]
+        [SwaggerOperationFilter(typeof(int))]
+        [SwaggerResponse(401)]
         public IEnumerable<Pessoa> Get()
         {
             using (var db = new LiteDatabase(@"MyData.db"))

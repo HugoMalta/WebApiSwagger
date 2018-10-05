@@ -1,0 +1,12 @@
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\bin\Debug\netcoreapp2.1\WebApiSwagger.Negocio.deps.json
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\bin\Debug\netcoreapp2.1\WebApiSwagger.Negocio.dll
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\bin\Debug\netcoreapp2.1\WebApiSwagger.Negocio.pdb
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\bin\Debug\netcoreapp2.1\WebApiSwagger.Model.dll
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\bin\Debug\netcoreapp2.1\WebApiSwagger.Model.pdb
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\obj\Debug\netcoreapp2.1\WebApiSwagger.Negocio.csprojAssemblyReference.cache
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\obj\Debug\netcoreapp2.1\WebApiSwagger.Negocio.csproj.CoreCompileInputs.cache
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\obj\Debug\netcoreapp2.1\WebApiSwagger.Negocio.AssemblyInfoInputs.cache
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\obj\Debug\netcoreapp2.1\WebApiSwagger.Negocio.AssemblyInfo.cs
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\obj\Debug\netcoreapp2.1\WebApiSwagger.Negocio.csproj.CopyComplete
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\obj\Debug\netcoreapp2.1\WebApiSwagger.Negocio.dll
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Negocio\obj\Debug\netcoreapp2.1\WebApiSwagger.Negocio.pdb
