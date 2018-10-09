@@ -21,10 +21,10 @@ script:
 
 
   build-wrapper-linux-x86-64 --out-dir bw-output make clean all
-  sonar-scanner \
-  -Dsonar.projectKey=HugoMalta_WebApiSwagger \
-  -Dsonar.organization=hugomalta-github \
-  -Dsonar.sources=. \
-  -Dsonar.cfamily.build-wrapper-output=bw-output \
-  -Dsonar.host.url=https://sonarcloud.io \
-  -Dsonar.login=598ffdf4751d508b9aca92c60a77417ed743ac57
+  #sonar-scanner \
+  #Dsonar.projectKey=HugoMalta_WebApiSwagger \
+  #Dsonar.organization=hugomalta-github \
+  #Dsonar.sources=. \
+  #Dsonar.cfamily.build-wrapper-output=bw-output \
+  #Dsonar.host.url=https://sonarcloud.io \
+  #Dsonar.login=598ffdf4751d508b9aca92c60a77417ed743ac57
