@@ -20,7 +20,7 @@ script:
   #SonarScanner.MSBuild.exe end /d:sonar.login="598ffdf4751d508b9aca92c60a77417ed743ac57"
 
 
-  build-wrapper-linux-x86-64 --out-dir bw-output make clean all
+  #build-wrapper-linux-x86-64 --out-dir bw-output make clean all
   #sonar-scanner \
   #Dsonar.projectKey=HugoMalta_WebApiSwagger \
   #Dsonar.organization=hugomalta-github \
