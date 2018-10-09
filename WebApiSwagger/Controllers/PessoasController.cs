@@ -40,6 +40,7 @@ namespace WebApiSwagger.v1.Controllers
             }
         }
 
+
         /// <summary>
         /// Selecionar Pessoa por identificador
         /// </summary>
@@ -48,6 +49,14 @@ namespace WebApiSwagger.v1.Controllers
         [HttpGet("{id}", Name = "Get")]
         public Pessoa Get(int id)
         {
+            /// asdfasdf
+            /// sdfasdf
+            /// asdf
+            /// asdf
+            /// asdf
+            /// 
+
+
             using (var db = new LiteDatabase(@"MyData.db"))
             {
                 // Get customer collection
@@ -61,17 +70,22 @@ namespace WebApiSwagger.v1.Controllers
         }
 
         /// <summary>
-        /// incluir pessoa
+        /// Incluir Pessoa
         /// </summary>
-        /// <param name="_pessoa">Objeto Pessoa</param>
+        /// <param name="_pessoa">Objeto de Pessoa</param>
+        /// <returns>Retorna lista de pessoas!</returns>
+        [SwaggerResponse(500)]
+        [SwaggerResponse(200)]
+        [SwaggerResponse(400)]
         [HttpPost]
-        public void Post([FromBody] Pessoa _pessoa)
+        public IEnumerable<Pessoa> Post([FromBody] Pessoa _pessoa)
         {
             using (var db = new LiteDatabase(@"MyData.db"))
             {
                 // Get customer collection
                 var pessoas = db.GetCollection<Pessoa>("pessoas");
                 pessoas.Insert(_pessoa);
+                return null;
             }
 
         }
