@@ -25,6 +25,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebApiSwagger.Model\WebApiSwagger.Model.csproj" />
+    <ProjectReference Include="..\WebApiSwagger.Negocio\WebApiSwagger.Negocio.csproj" />
   </ItemGroup>
 
 </Project>

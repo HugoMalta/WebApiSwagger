@@ -315,6 +315,19 @@
         "runtime": {
           "bin/placeholder/WebApiSwagger.Model.dll": {}
         }
+      },
+      "WebApiSwagger.Repositorio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "dependencies": {
+          "WebApiSwagger.Model": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/WebApiSwagger.Repositorio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/WebApiSwagger.Repositorio.dll": {}
+        }
       }
     }
   },
@@ -1290,12 +1303,18 @@
       "type": "project",
       "path": "../WebApiSwagger.Model/WebApiSwagger.Model.csproj",
       "msbuildProject": "../WebApiSwagger.Model/WebApiSwagger.Model.csproj"
+    },
+    "WebApiSwagger.Repositorio/1.0.0": {
+      "type": "project",
+      "path": "../WebApiSwagger.Repositorio/WebApiSwagger.Repositorio.csproj",
+      "msbuildProject": "../WebApiSwagger.Repositorio/WebApiSwagger.Repositorio.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.NETCore.App >= 2.1.0",
-      "WebApiSwagger.Model >= 1.0.0"
+      "WebApiSwagger.Model >= 1.0.0",
+      "WebApiSwagger.Repositorio >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -1330,6 +1349,9 @@
           "projectReferences": {
             "C:\\HugoMalta\\Git\\WebApiSwagger\\WebApiSwagger.Model\\WebApiSwagger.Model.csproj": {
               "projectPath": "C:\\HugoMalta\\Git\\WebApiSwagger\\WebApiSwagger.Model\\WebApiSwagger.Model.csproj"
+            },
+            "C:\\HugoMalta\\Git\\WebApiSwagger\\WebApiSwagger.Repositorio\\WebApiSwagger.Repositorio.csproj": {
+              "projectPath": "C:\\HugoMalta\\Git\\WebApiSwagger\\WebApiSwagger.Repositorio\\WebApiSwagger.Repositorio.csproj"
             }
           }
         }

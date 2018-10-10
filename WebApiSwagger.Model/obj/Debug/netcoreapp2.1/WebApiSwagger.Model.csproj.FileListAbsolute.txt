@@ -1,9 +1,8 @@
-C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\obj\Debug\netcoreapp2.1\WebApiSwagger.Model.csproj.CoreCompileInputs.cache
-C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\obj\Debug\netcoreapp2.1\WebApiSwagger.Model.AssemblyInfoInputs.cache
-C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\obj\Debug\netcoreapp2.1\WebApiSwagger.Model.AssemblyInfo.cs
 C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\bin\Debug\netcoreapp2.1\WebApiSwagger.Model.deps.json
 C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\bin\Debug\netcoreapp2.1\WebApiSwagger.Model.dll
 C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\bin\Debug\netcoreapp2.1\WebApiSwagger.Model.pdb
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\obj\Debug\netcoreapp2.1\WebApiSwagger.Model.csproj.CoreCompileInputs.cache
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\obj\Debug\netcoreapp2.1\WebApiSwagger.Model.AssemblyInfoInputs.cache
+C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\obj\Debug\netcoreapp2.1\WebApiSwagger.Model.AssemblyInfo.cs
 C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\obj\Debug\netcoreapp2.1\WebApiSwagger.Model.dll
 C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\obj\Debug\netcoreapp2.1\WebApiSwagger.Model.pdb
-C:\HugoMalta\Git\WebApiSwagger\WebApiSwagger.Model\obj\Debug\netcoreapp2.1\WebApiSwagger.Model.csprojAssemblyReference.cache

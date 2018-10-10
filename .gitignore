@@ -2,6 +2,10 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
+/WebApiSwagger.Repositorio/bin
+/WebApiSwagger.Repositorio/obj
+/WebApiSwagger.Negocio/bin
+/WebApiSwagger.Negocio/Obj
 /WebApiSwagger/obj
 /WebApiSwagger/bin
 /.vs

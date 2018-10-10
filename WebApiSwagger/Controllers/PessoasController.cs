@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Annotations;
 using WebApiSwagger.Model.Model;
+using WebApiSwagger.Negocio;
 using WebApiSwagger.Utils;
 
 namespace WebApiSwagger.v1.Controllers
@@ -16,30 +17,27 @@ namespace WebApiSwagger.v1.Controllers
     [ApiController]
     public class PessoasController : ControllerBase
     {
-
         /// <summary>
         /// Listar todas as pessoas
         /// </summary>
         /// <returns>Lista de Pessoas</returns>
         [HttpGet]
-        [SwaggerResponse((int)HttpStatusCode.OK)]
-        [SwaggerResponse(210)]
-        [SwaggerOperationFilter(typeof(int))]
-        [SwaggerResponse(401)]
+        [SwaggerResponse(200)]
         public IEnumerable<Pessoa> Get()
         {
-            using (var db = new LiteDatabase(@"MyData.db"))
+            try
             {
-                // Get customer collection
-                var pessoas = db.GetCollection<Pessoa>("pessoas");
-
-                // Use Linq to query documents
-                var results = pessoas.FindAll();
-
-                return results;
+                using (var pessoaNegocio = new PessoaNegocio())
+                {
+                    return pessoaNegocio.Get();
+                }
             }
+            catch (Exception)
+            {
+                throw;
+            }
+            
         }
-
 
         /// <summary>
         /// Selecionar Pessoa por identificador
@@ -47,25 +45,19 @@ namespace WebApiSwagger.v1.Controllers
         /// <param name="id">Identificador da pessoa</param>
         /// <returns>Objeto Pessoa</returns>
         [HttpGet("{id}", Name = "Get")]
+        [SwaggerResponse(200)]
         public Pessoa Get(int id)
         {
-            /// asdfasdf
-            /// sdfasdf
-            /// asdf
-            /// asdf
-            /// asdf
-            /// 
-
-
-            using (var db = new LiteDatabase(@"MyData.db"))
+            try
             {
-                // Get customer collection
-                var pessoas = db.GetCollection<Pessoa>("pessoas");
-
-                // Use Linq to query documents
-                var results = pessoas.FindById(id);
-
-                return results;
+                using (var pessoaNegocio = new PessoaNegocio())
+                {
+                    return pessoaNegocio.Get(id);
+                }
+            }
+            catch (Exception)
+            {
+                throw;
             }
         }
 
@@ -73,21 +65,21 @@ namespace WebApiSwagger.v1.Controllers
         /// Incluir Pessoa
         /// </summary>
         /// <param name="_pessoa">Objeto de Pessoa</param>
-        /// <returns>Retorna lista de pessoas!</returns>
-        [SwaggerResponse(500)]
+        /// <returns>Resultado da ação - status code</returns>
         [SwaggerResponse(200)]
         [SwaggerResponse(400)]
         [HttpPost]
-        public IEnumerable<Pessoa> Post([FromBody] Pessoa _pessoa)
+        public ActionResult Post([FromBody] Pessoa _pessoa)
         {
-            using (var db = new LiteDatabase(@"MyData.db"))
+            using (var pessoaNegocio = new PessoaNegocio())
             {
-                // Get customer collection
-                var pessoas = db.GetCollection<Pessoa>("pessoas");
-                pessoas.Insert(_pessoa);
-                return null;
+                Pessoa pessoaInserida = pessoaNegocio.Post(_pessoa);
+                if(pessoaInserida != null && pessoaInserida.Codigo > 0)
+                {
+                    return Ok();
+                }
             }
-
+            return BadRequest();
         }
 
         /// <summary>
@@ -95,39 +87,42 @@ namespace WebApiSwagger.v1.Controllers
         /// </summary>
         /// <param name="id">Identificador da Pessoa</param>
         /// <param name="_pessoa">Objeto pessoa</param>
+        /// <returns>Resultado da ação - status code</returns>
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] Pessoa _pessoa)
+        [SwaggerResponse(200)]
+        [SwaggerResponse(400)]
+        public ActionResult Put(int id, [FromBody] Pessoa _pessoa)
         {
-            using (var db = new LiteDatabase(@"MyData.db"))
+            using (var pessoaNegocio = new PessoaNegocio())
             {
-                // Get customer collection
-                var pessoas = db.GetCollection<Pessoa>("pessoas");
-
-                // Use Linq to query documents
-                var pessoa = pessoas.FindById(id);
-
-                pessoa.DataNascimento = _pessoa.DataNascimento;
-                pessoa.Documento = _pessoa.Documento;
-                pessoa.Nome = _pessoa.Nome;
-
-                pessoas.Update(pessoa);
+                bool alterou = pessoaNegocio.Put(id, _pessoa);
+                if (alterou == true)
+                {
+                    return Ok();
+                }
             }
+            return BadRequest();
         }
 
         /// <summary>
         /// Excluir Pessoa
         /// </summary>
         /// <param name="id">Identificador da Pessoa</param>
+        /// <returns>Resultado da ação - status code</returns>
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        [SwaggerResponse(200)]
+        [SwaggerResponse(400)]
+        public ActionResult Delete(int id)
         {
-            using (var db = new LiteDatabase(@"MyData.db"))
+            using (var pessoaNegocio = new PessoaNegocio())
             {
-                // Get customer collection
-                var pessoas = db.GetCollection<Pessoa>("pessoas");
-
-                pessoas.Delete(x => x.Codigo == id);
+                int numRegistrosAlterados = pessoaNegocio.Delete(id);
+                if (numRegistrosAlterados > 0)
+                {
+                    return Ok();
+                }
             }
+            return BadRequest();
         }
 
     }

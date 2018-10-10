@@ -8,7 +8,8 @@
     ".NETCoreApp,Version=v2.1": {
       "WebApiSwagger.Negocio/1.0.0": {
         "dependencies": {
-          "WebApiSwagger.Model": "1.0.0"
+          "WebApiSwagger.Model": "1.0.0",
+          "WebApiSwagger.Repositorio": "1.0.0"
         },
         "runtime": {
           "WebApiSwagger.Negocio.dll": {}
@@ -68,6 +69,14 @@
         },
         "runtime": {
           "WebApiSwagger.Model.dll": {}
+        }
+      },
+      "WebApiSwagger.Repositorio/1.0.0": {
+        "dependencies": {
+          "WebApiSwagger.Model": "1.0.0"
+        },
+        "runtime": {
+          "WebApiSwagger.Repositorio.dll": {}
         }
       }
     }
@@ -135,6 +144,11 @@
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
     "WebApiSwagger.Model/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "WebApiSwagger.Repositorio/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

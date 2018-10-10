@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\WebApiSwagger.Model\WebApiSwagger.Model.csproj" />
+    <ProjectReference Include="..\WebApiSwagger.Repositorio\WebApiSwagger.Repositorio.csproj" />
   </ItemGroup>
 
 </Project>
