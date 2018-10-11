@@ -111,7 +111,7 @@ namespace WebApiSwagger.v1.Controllers
         /// <returns>Resultado da ação - status code</returns>
         [HttpDelete("{id}")]
         [SwaggerResponse(200)]
-        [SwaggerResponse(400)]
+        [SwaggerResponse(400, Type=typeof(Pessoa))]
         public ActionResult Delete(int id)
         {
             using (var pessoaNegocio = new PessoaNegocio())

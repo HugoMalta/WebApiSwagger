@@ -6,10 +6,8 @@
 /WebApiSwagger.Repositorio/obj
 /WebApiSwagger.Negocio/bin
 /WebApiSwagger.Negocio/Obj
-/WebApiSwagger.Model/bin
-/WebApiSwagger.Model/obj
 /WebApiSwagger/obj
 /WebApiSwagger/bin
 /.vs
-
-
+/WebApiSwagger.Model/bin/Release/netcoreapp2.1
+/WebApiSwagger.Model/obj/Release/netcoreapp2.1
