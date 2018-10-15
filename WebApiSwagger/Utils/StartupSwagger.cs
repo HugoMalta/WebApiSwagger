@@ -62,6 +62,7 @@ namespace WebApiSwagger.Utils
                 var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                 var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
                 c.IncludeXmlComments(xmlPath);
+                c.DescribeAllEnumsAsStrings();
             });
         }
 
@@ -71,7 +72,7 @@ namespace WebApiSwagger.Utils
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "v1");
+                c.SwaggerEndpoint("v1/swagger.json", "My API V1");
             });
         }
     }

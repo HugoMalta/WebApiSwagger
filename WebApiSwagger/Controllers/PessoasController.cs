@@ -73,10 +73,24 @@ namespace WebApiSwagger.v1.Controllers
         {
             using (var pessoaNegocio = new PessoaNegocio())
             {
+                try
+                {
+
+                
                 Pessoa pessoaInserida = pessoaNegocio.Post(_pessoa);
+
+                int codPessoa = _pessoa.Codigo;
+                int codigo2 = pessoaInserida.Codigo;
+
                 if(pessoaInserida != null && pessoaInserida.Codigo > 0)
                 {
                     return Ok();
+                }
+                }
+                catch (Exception ex)
+                {
+
+                    throw;
                 }
             }
             return BadRequest();

@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApiSwagger</name>
+    </assembly>
+    <members>
+        <member name="M:WebApiSwagger.v1.Controllers.PessoasController.Get">
+            <summary>
+            Listar todas as pessoas
+            </summary>
+            <returns>Lista de Pessoas</returns>
+        </member>
+        <member name="M:WebApiSwagger.v1.Controllers.PessoasController.Get(System.Int32)">
+            <summary>
+            Selecionar Pessoa por identificador
+            </summary>
+            <param name="id">Identificador da pessoa</param>
+            <returns>Objeto Pessoa</returns>
+        </member>
+        <member name="M:WebApiSwagger.v1.Controllers.PessoasController.Post(WebApiSwagger.Model.Model.Pessoa)">
+            <summary>
+            Incluir Pessoa
+            </summary>
+            <param name="_pessoa">Objeto de Pessoa</param>
+            <returns>Resultado da ação - status code</returns>
+        </member>
+        <member name="M:WebApiSwagger.v1.Controllers.PessoasController.Put(System.Int32,WebApiSwagger.Model.Model.Pessoa)">
+            <summary>
+            Atualizar pessoa
+            </summary>
+            <param name="id">Identificador da Pessoa</param>
+            <param name="_pessoa">Objeto pessoa</param>
+            <returns>Resultado da ação - status code</returns>
+        </member>
+        <member name="M:WebApiSwagger.v1.Controllers.PessoasController.Delete(System.Int32)">
+            <summary>
+            Excluir Pessoa
+            </summary>
+            <param name="id">Identificador da Pessoa</param>
+            <returns>Resultado da ação - status code</returns>
+        </member>
+        <member name="M:WebApiSwagger.v1.Controllers.ValuesController.NaoMostrarNoSwagger">
+            <summary>
+            Teste de método que não é apresentado no Swagger.
+            </summary>
+            <returns>Lista de valores</returns>
+        </member>
+        <member name="M:WebApiSwagger.v1.Controllers.ValuesController.Get">
+            <summary>
+            Obter todos os valores. Projeto padrão.
+            </summary>
+            <returns>Lista de valores</returns>
+        </member>
+        <member name="M:WebApiSwagger.v1.Controllers.ValuesController.Get(System.Int32,System.Nullable{System.Int32})">
+            <summary>
+            Obter valor por Id
+            </summary>
+            <param name="id">Identificador do Método GET</param>
+            <param name="testeParametroNulo"><b>Apenas</b> um parâmetro de teste...</param>
+            <returns>Valor</returns>
+        </member>
+        <member name="M:WebApiSwagger.v1.Controllers.ValuesController.Post(System.String)">
+            <summary>
+            Salvar
+            </summary>
+            <param name="value">Valor</param>
+        </member>
+        <member name="M:WebApiSwagger.v1.Controllers.ValuesController.Put(System.Int32,System.String)">
+            <summary>
+            Atualizar
+            </summary>
+            <param name="id">Identificador</param>
+            <param name="value">Valor</param>
+        </member>
+        <member name="M:WebApiSwagger.v1.Controllers.ValuesController.Delete(System.Int32)">
+            <summary>
+            Excluir
+            </summary>
+            <param name="id">Identificador</param>
+        </member>
+    </members>
+</doc>
